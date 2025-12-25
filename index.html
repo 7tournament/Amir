@@ -372,7 +372,9 @@ function updatePrice(){
 
     let pricePer1k = services[serv].price[q];
     let totalPrice = (qty/1000) * pricePer1k * rates[curr];
-    per1kBox.textContent = `Price per 1k: ${curr} ${pricePer1k.toFixed(2)}`;
+    let pricePer1kConverted = pricePer1k * rates[curr];
+
+per1kBox.textContent = `Price per 1k: ${curr} ${pricePer1kConverted.toFixed(2)}`;
     totalBox.textContent = `Total Price: ${curr} ${totalPrice.toFixed(2)}`;
 }
 quantity.addEventListener("input", updatePrice);
