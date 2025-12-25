@@ -32,7 +32,11 @@ body.sidebar-open #sidebar{transform: translateX(0);}
   padding:18px 12px;margin-bottom:15px;font-family:'Orbitron',sans-serif;
   font-weight:700;color: var(--sidebar-text);border-radius:12px;cursor:pointer;transition:0.3s;
 }
-#sidebar ul li:hover,.active{background:var(--sidebar-hover);color:#000;}
+#sidebar ul li:hover,
+#sidebar ul li.active {
+  background: var(--sidebar-hover);
+  color: var(--sidebar-active-text);
+}
 #hamburger{
   position:fixed;top:20px;left:20px;width:35px;height:30px;display:flex;flex-direction:column;
   justify-content:space-between;cursor:pointer;z-index:1100;
